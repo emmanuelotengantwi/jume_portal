@@ -43,6 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
   <div class="container">
+  <img src="img/logo.png" alt="Logo" style="width: 140px; height: auto;">
+  
+
+
+
     <h2>Create Account</h2>
     <?php if ($error) echo "<div class='error'>$error</div>"; ?>
     <?php if ($success) echo "<div class='success'>$success</div>"; ?>
@@ -56,39 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
 </body>
 </html>
-<div class="social-login">
-  <div id="g-btn-wrap"></div>
-  <button type="button" class="social-btn facebook" onclick="handleFacebookLogin()">
-    <i class="fa-brands fa-facebook-f"></i> Facebook
-  </button>
-</div>
+
 
 <!-- Add these scripts at the end of body in signup.php -->
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
 <script src="scripts.js"></script>
-<script>
-  // Google init
-  window.onload = function() {
-    const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
-    google.accounts.id.initialize({
-      client_id: GOOGLE_CLIENT_ID,
-      callback: handleGoogleCredentialResponse
-    });
-    google.accounts.id.renderButton(
-      document.getElementById("g-btn-wrap"),
-      { theme: "filled_blue", size: "large", text: "signin_with", shape: "pill", width: "100%" }
-    );
-  };
 
-  // Facebook init
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : 'YOUR_FACEBOOK_APP_ID',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v19.0'
-    });
-  };
-</script>

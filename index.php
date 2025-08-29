@@ -691,7 +691,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
     <header>
       <div class="header-left">
         <div class="logo">
-          <div class="logo-img">J</div>
+         <div class="logo-img">
+  <img src="img/logo.png" alt="Logo">
+</div>
+
           <span class="company-name">Jume IT Solution Consult</span>
         </div>
       </div>

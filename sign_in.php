@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container">
+        <img src="img/logo.png" alt="Logo" style="width: 140px; height: auto;">
+
         <h2>Sign In</h2>
         <?php if ($error): ?>
             <div class="error"><?= htmlspecialchars($error) ?></div>
