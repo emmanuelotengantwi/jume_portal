@@ -1,0 +1,54 @@
+/* ===================== GLOBAL ===================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error { color: red; margin-top: 10px; }
+.success { color: green; margin-top: 10px; }
+
+/* ===================== BUTTONS ===================== */
+.btn, button {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  width: 95%;
+  margin-top: 12px;
+}
+
+.btn:hover, button:hover {
+  background: #0056b3;
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
